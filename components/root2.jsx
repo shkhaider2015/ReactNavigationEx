@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from "react-native";
-import MyAppBar from './appBar';
 import { MyBottomNavigator } from "./routes";
 
 
@@ -18,15 +17,15 @@ const styles = StyleSheet.create({
   });
 
 
-class Root extends Component {
+class Root2 extends Component {
     render() {
-        console.log("Home Pag")
+        console.log("Home Pag 2")
         return (
             <MyBottomNavigator />
         );
     }
 }
 
-export {Root};
+export {Root2};
 
 

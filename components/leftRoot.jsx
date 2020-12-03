@@ -8,7 +8,7 @@ class LeftRoot extends Component {
     render() {
         return (
             <View style={styles.container} >
-                <Text>Welcome LeftRoot</Text>
+                <Text>Welcome to the LeftRoot</Text>
             </View>
         );
     }
