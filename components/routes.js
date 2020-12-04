@@ -20,8 +20,18 @@ export const MyStackNavigator = () => {
     return (
             <AppNavigator.Navigator initialRouteName={"Home"}  >
 
-                <AppNavigator.Screen name="Home" component={Home} options={{ header : props => <MyAppBar {...props} title="Home" /> }}    />
-                <AppNavigator.Screen name="profile" component={Home2}  />
+                <AppNavigator.Screen name="Home" component={Home} options={{ 
+                    header : props => <MyAppBar {...props} title="Home" back={false} />, 
+                    // headerStyle : {} 
+                
+                }}
+                    />
+                <AppNavigator.Screen name="profile" component={Home2}  
+                options={{ 
+                    header : props => <MyAppBar {...props} title="Profile" back={true} />, 
+                    // headerStyle : {}
+                }}
+                />
             </AppNavigator.Navigator>
     )
 }

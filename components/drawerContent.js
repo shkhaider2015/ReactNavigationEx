@@ -81,7 +81,7 @@ export class DrawerContent extends React.Component {
                                 <View style={styles.preference} >
                                     <Text>Dark Theme</Text>
                                     <View pointerEvents="none" >
-                                    <Switch value={this.state.isDarkTheme} />
+                                    <Switch value={this.state.isDarkTheme} color="#4323b8" />
                                     </View>
                                     
                                 </View>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     userInfoSection: {
-        paddingLeft: 20
+        paddingLeft: 20,
     },
     title: {
         fontSize: 16,
