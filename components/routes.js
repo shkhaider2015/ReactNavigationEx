@@ -2,7 +2,7 @@ import React from 'react'
 import { Root as Home } from "./root";
 import { Root2 as Home2 } from "./root2";
 import { LeftRoot } from "./leftRoot";
-import { RightRoot } from "./rightRoot";
+import  RightRoot  from "./rightRoot";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createDrawerNavigator } from "@react-navigation/drawer";

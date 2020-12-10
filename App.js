@@ -1,25 +1,29 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { HomePage } from "./components/routes";
+import { InMemoryCache, ApolloProvider, ApolloClient } from "@apollo/client";
 import { MyDrawerNavigator } from "./components/routes";
-import { MyStackNavigator } from "./components/routes";
-
+import { AppRegistry } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
-import MyAppBar from './components/appBar';
+// import { InMemoryCache, ApolloProvider, ApolloClient } from "@apollo/react-hoc";
 
+const client = new ApolloClient({
+  uri: "https://graphqlzero.almansi.me/api",
+  cache: new InMemoryCache()
+})
 
 export default function App() {
 
 
   return (
-    <NavigationContainer>
+    <ApolloProvider client={client} >
+      <NavigationContainer>
         <MyDrawerNavigator />
-    </NavigationContainer>
-        
+      </NavigationContainer>
+    </ApolloProvider>
+
+
   );
 }
-
+AppRegistry.registerComponent("My Application ", () => App)
 // const styles = StyleSheet.create({
 //   container: {
 //     flex: 1,
