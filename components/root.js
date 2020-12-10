@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text } from "react-native";
 import MyAppBar from './appBar';
 import { MyBottomNavigator } from "./routes";
+import { LeftRoot } from "./leftRoot";
+import  RightRoot  from "./rightRoot";
 
 
 const styles = StyleSheet.create({
@@ -22,7 +24,7 @@ class Root extends Component {
     render() {
         console.log("Home Pag")
         return (
-            <MyBottomNavigator />
+            <MyBottomNavigator cm1={LeftRoot} cm2={RightRoot}  />
         );
     }
 }

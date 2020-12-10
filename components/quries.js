@@ -25,3 +25,12 @@ export const userPost = gql`query($id : ID!) {
     }
   }
 }`
+
+export const createUser = gql`mutation ($input: CreatePostInput!) {
+  createPost(input: $input) {
+    id
+    title
+    body
+  }
+}
+`

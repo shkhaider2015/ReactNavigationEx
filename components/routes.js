@@ -2,6 +2,7 @@ import React from 'react'
 import { Root as Home } from "./root";
 import { Root2 as Home2 } from "./root2";
 import { LeftRoot } from "./leftRoot";
+import LeftProfileRoot from "./leftProfile";
 import  RightRoot  from "./rightRoot";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -36,12 +37,12 @@ export const MyStackNavigator = () => {
     )
 }
 
-export const MyBottomNavigator = () => {
+export const MyBottomNavigator = ({ cm1, cm2 }) => {
     return (
 
         <BottomTab.Navigator initialRouteName="Left" >
-            <BottomTab.Screen name="Left" component={LeftRoot} />
-            <BottomTab.Screen name="Right" component={RightRoot} />
+            <BottomTab.Screen name="Left" component={cm1} />
+            <BottomTab.Screen name="Right" component={cm2} />
         </BottomTab.Navigator>
     )
 }
